@@ -3,10 +3,10 @@ from flask import Flask, jsonify, request
 app = Flask(__name__)
 
 
-@app.route('/hello', methods=['GET'])
-def helloworld():
+@app.route('/', methods=['GET'])
+def success():
 	if(request.method == 'GET'):
-		data = {"data": "Hello World"}
+		data = {"status": "success"}
 		return jsonify(data)
 
 
